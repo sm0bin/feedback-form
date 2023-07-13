@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .jet {
+            transition: all .4s ease-in-out;
+            text-decoration: none;
+            color: lightblue
+        }
+
+        .jet:hover {
+            /* background-color: #fff; */
+            color: red;
+        }
+
+        .jet {
+            position: fixed;
+            z-index: 10;
+            right: 40px;
+            bottom: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* text-align: center; */
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            background-color: #000;
+            color: white;
+        }
+
+        .jet i {
+            margin: auto;
+            font-size: 1.25rem;
+        }
+
+        abbr,
+        button,
+        a,
+        input[type="submit"] {
+            cursor: pointer;
+        }
+
+        .tooltip-holder {
+            position: relative;
+            display: inline;
+        }
+
+        #tooltipi {
+            display: inline;
+            /* top: 2px; */
+            /* margin-bottom: 8px; */
+            margin-left: 4px;
+            font-size: .75rem;
+            color: #00000041;
+        }
+
+        #tooltip-text {
+            position: absolute;
+            top: -85px;
+            left: 20px;
+            /* left: 100%; */
+            width: 200px;
+            padding: 0 12px;
+            background-color: #cccccc;
+            color: #1f1f1f;
+            border-radius: 4px;
+            display: none;
+            /* z-index: 1; */
+        }
+
+
+        [area-describedby]:hover+[role="tooltip"] {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <a href="#start"><button class="jet"><i class="fa-solid fa-jet-fighter-up"></i></button></a>
+        <form action="">
+            <a href="#last" id="start">Repudiandae</a>
+            <a href="#class-1">Lorem</a>
+            <fieldset>
+                <legend>Main</legend>
+                <label for="story">Your Story:</label>
+                <textarea name="story" id="story" cols="30" rows="10" required></textarea>
+
+                <label for="rate">Rate:</label>
+                <select name="rate" id="rate" required>
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="everage">Average</option>
+                    <option value="fair">Fair</option>
+                    <option value="poor">Poor</option>
+                </select>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Extra</legend>
+                <details>
+                    <summary><i class="fa-regular fa-circle-question"> About this</i></summary>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dolore ut debitis blanditiis
+                        voluptates explicabo, alias temporibus consequuntur facilis molestiae!</p>
+                </details>
+
+                <label for="slider">Range:</label>
+                <input type="range" name="slider" id="slider" min="1" max="5">
+
+                <label for="progress">Progress:</label>
+                <progress name="progress" id="progress" max="100"></progress>
+                <progress name="progress" value="50" id="progress" max="100"></progress>
+
+                <meter value=".5"></meter>
+
+                <bdo dir="rtl">Mobin</bdo>
+
+                <abbr title="Shehjad Mobin">Mobin</abbr>
+            </fieldset>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div id="class-1">
+            <h1 style="display: inline;">Lorem ipsum dolor sit amet.</h1>
+            <div class="tooltip-holder">
+
+                <i aria-describedby="tooltip-text" class="fa-solid fa-circle-info" id="tooltipi"></i>
+                <div role="tooltip" id="tooltip-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur rerum dolorem neque numquam illo
+                architecto a doloribus nihil obcaecati quas.</p>
+        </div>
+        <div class="class-2">
+            <h1>Alias suscipit neque unde similique!</h1>
+            <p>Voluptatem fugit perspiciatis natus deleniti veritatis recusandae accusamus pariatur, quisquam obcaecati
+                molestias, nesciunt provident porro labore deserunt repellendus exercitationem alias?</p>
+        </div>
+        <div class="class-3">
+            <h1>In ipsum at facere aliquid.</h1>
+            <p>Amet nihil saepe unde omnis rerum quos, sint blanditiis repudiandae dicta laborum dolor modi veniam
+                exercitationem facere quae sapiente tempore?</p>
+        </div>
+        <div class="class-4">
+            <h1>Non officiis adipisci ipsam tenetur!</h1>
+            <p>Esse, quas est itaque reiciendis vitae ut aperiam laborum accusamus minus consequatur dolorum officia
+                eaque necessitatibus magnam quisquam, sit impedit.</p>
+        </div>
+        <div class="class-5">
+            <h1 id="last">Repudiandae architecto error dolor laboriosam.</h1>
+            <p>Deleniti cumque, saepe tenetur reprehenderit repellendus dolore animi pariatur modi quasi quidem. Ipsam
+                porro vel id, illo quae asperiores eum.</p>
+        </div>
+    </main>
+</body>
+
+</html>
